@@ -97,7 +97,10 @@ Trong phát triển web và API, việc **chọn mô hình xác thực** ảnh h
 **Kết luận:**  
 - **Stateful**: phù hợp cho web app truyền thống, cần logout/revoke ngay, bảo mật cao.  
 - **Stateless**: phù hợp cho API, microservices, mobile app, cần scale tốt.  
-- **JWT**: mạnh mẽ nhưng dễ bị dùng sai → cần token ngắn hạn, refresh token, tránh localStorage.  
+- **JWT**: mạnh mẽ nhưng dễ bị dùng sai → cần token ngắn hạn, refresh token, tránh localStorage.
+- Cookie luôn ở client, nhưng server có thể quản lý (gửi/xóa/set flag).
+- Cookie + session: client chỉ giữ ID, server lưu toàn bộ thông tin → stateful.
+- Cookie + JWT: client giữ token, server không lưu thông tin phiên → stateless.
 
 ---
 
